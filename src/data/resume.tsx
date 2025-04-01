@@ -2,15 +2,15 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Rohan Verma",
-  initials: "DV",
+  name: "Rohan Singla",
+  initials: "RS",
   url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  location: "Punjab, IN",
+  locationLink: "https://www.google.com/maps/place/punjab",
   description:
-    "A Full Stack Web3 Developer. I love building things and helping people. Very active on Twitter",
+    "A Full Stack Web3 Developer. I love building things and helping people. Very active on X",
   summary:
-    "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started as a freelancer, diving into blockchain, building dApps, and contributing to open-source projects. Through hackathons and personal projects, I've explored DeFi and Social, always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond. 🚀",
+    "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started out as a freelancer, diving into blockchain, building dApps, and contributing in Web3 . Actively participating in hackathons and events , I've explored DeFi , Social , Gaming always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond. 🚀",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
