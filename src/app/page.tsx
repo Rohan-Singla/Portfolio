@@ -188,7 +188,7 @@ export default function Page() {
                   className="text-blue-500 hover:underline"
                 >
                   Connect here
-                </Link>{" "} Let's get in touch and build together.
+                </Link>{" "} Let&apos;s get in touch and build together.
               </p>
             </div>
           </BlurFade>
