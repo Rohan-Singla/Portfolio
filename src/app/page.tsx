@@ -141,7 +141,7 @@ export default function Page() {
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I love participating in hackathons, I have attended{" "}
+                  I love participating in hackathons, I have participated and built projects in{" "}
                   {DATA.hackathons.length}+ hackathons till now . Love to collaborate with People from around the
                   globe come together and build. Absolutely lovely to see the endless possibilities
                   brought to life by a group of motivated and passionate
@@ -182,15 +182,13 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Want to chat? Just shoot me a DM on any social or book a call{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href="https://linktr.ee/rohanBuilds"
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                  Connect here
+                </Link>{" "} Let's get in touch and build together.
               </p>
             </div>
           </BlurFade>
