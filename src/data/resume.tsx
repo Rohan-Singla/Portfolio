@@ -82,7 +82,7 @@ export const DATA = {
       start: "Sep 2024",
       end: "Present",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "As a frontend and web3 dev, I built the whole frontend for company's products with client side blockchain integrations like wallets etc...",
     },
     {
       company: "Aranyaaa",
@@ -94,7 +94,7 @@ export const DATA = {
       start: "June 2024",
       end: "Sep 2024",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "As a backend developer, I developed the whole backend for Aranyaaa's clothing web application using PHP and MySQL.",
     },
     {
       company: "AngelBells",
@@ -106,7 +106,7 @@ export const DATA = {
       start: "January 2024",
       end: "June 2024",
       description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
+        "As a marketer and dev , I helped the company in increasing the sales on marketplaces, also developed the whole web application .",
     },
   ],
   projects: [
@@ -257,7 +257,7 @@ export const DATA = {
       dates: "October 3rd - November 10th, 2024",
       location: "Remote,Online",
       description:
-        "Developed a onchain lending platform in DeFi which helped people earn yield",
+        "Developed a onchain lending platform in DeFi which helps people earn yield.",
       image:
         "https://aethir.com/icon.svg?a61a75a286780336",
       mlh: "https://aethir.com/icon.svg?a61a75a286780336",
