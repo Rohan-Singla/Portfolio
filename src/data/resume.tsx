@@ -1,14 +1,14 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Rohan Singla",
   initials: "RS",
-  url: "https://dillion.io",
+  url: "https://rohanbuilds.vercel.app/",
   location: "Punjab, IN",
   locationLink: "https://www.google.com/maps/place/punjab",
   description:
-    "A Full Stack Web3 Developer. I love building things and helping people. Very active on X",
+    "A Full Stack Web3 Developer. I love building things and Learning new things. Build In Public",
   summary:
     "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started out as a freelancer, diving into blockchain, building dApps, and contributing in Web3 . Actively participating in hackathons and events , I&apos;ve explored DeFi , Social , Gaming always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond. 🚀",
   avatarUrl: "/me.jpg",
@@ -82,7 +82,7 @@ export const DATA = {
       start: "Sep 2024",
       end: "Present",
       description:
-        "As a frontend and web3 dev, I built the whole frontend for company's products with client side blockchain integrations like wallets etc...",
+        "As a frontend and web3 dev, I built the whole frontend for company's products with client side blockchain integrations like wallets , payments etc...",
     },
     {
       company: "Aranyaaa",
@@ -111,6 +111,101 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Finlearn AI",
+      href: "https://finlearn-blue.vercel.app/",
+      dates: "May 2025 - June 2025",
+      active: true,
+      description:
+        "When the Perplexity AI Hackathon got announed , I and my team developed Finlearn AI an platform adapts to your learning style and financial goals, delivering personalized education that sticks",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "API Integrations",
+        "Python FastAPI",
+        "Firebase",
+        "Redux",
+        "TailwindCSS",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://finlearn-blue.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Demo",
+          href: "https://youtu.be/bvVVK2Degio",
+          icon: <Icons.youtube className="size-3" />,
+        },
+      ],
+      video: "",
+      image: "/finlearn.jpg",
+    },
+    {
+      title: "ABS Finance",
+      href: "https://github.com/ABSFinance/colloseum_monorepo",
+      dates: "April 2025 - May 2025",
+      active: true,
+      description:
+        "When the Breakout Hackathon by Colosseum got announed , I and my team developed ABS Finance an tool which  uses AI models to find and allocate your assets to the highest-yielding opportunities across solana and all the vaults.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "Python",
+        "Privy.io",
+        "VoltrSDK",
+        "Supabase",
+        "TailwindCSS",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "Demo",
+          href: "https://www.youtube.com/watch?v=mNUVM8me7r0",
+          icon: <Icons.youtube className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/ABSFinance/colloseum_monorepo",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      video: "",
+      image: "/absfinance.jpg",
+    },
+    {
+      title: "Solanautics",
+      href: "https://github.com/Rohan-Singla/Solanautics",
+      dates: "April 2025 - May 2025",
+      active: true,
+      description:
+        "When the Redacted Hackathon by Solana got announed , I and my team developed Solanautics an tool built using Solscan which helps you stay updated , track wallets , smart money tracking , price alerts. Also won 3rd position with 500$.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "Solscan API",
+        "Telegram and Helius API",
+        "Cron Jobs",
+        "TailwindCSS",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "Demo",
+          href: "https://www.loom.com/share/9f1c5a2fea9240f5a46d0d2b3f05d529",
+          icon: <Icons.youtube className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Rohan-Singla/Solanautics",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      video: "",
+      image: "/solanautics.png",
+    },
+    {
       title: "ApturaX",
       href: "https://apturax.tech/",
       dates: "March 2025 - April 2025",
@@ -129,9 +224,9 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
-          href: "https://apturax.tech",
-          icon: <Icons.globe className="size-3" />,
+          type: "Demo",
+          href: "https://youtu.be/sEH0WLo-ozQ",
+          icon: <Icons.youtube className="size-3" />,
         },
         {
           type: "Source",
@@ -139,99 +234,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      video:"",
+      video: "",
       image: "/aptura.jpg",
-    },
-    {
-      title: "TokenLaunchPad",
-      href: "https://rohan-token-launchpad.vercel.app/",
-      dates: "October 2024 - November 2024",
-      active: true,
-      description:
-        "Created a solana token launchpad which lets people create tokens,transfer tokens,view token holdings on devnet.",
-      technologies: [
-        "React.js",
-        "Javascript",
-        "TailwindCSS",
-        "web3.js",
-        "SPL Library",
-        "Solana Wallet Adapter"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://rohan-token-launchpad.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/RohanCreations/Solana-TokenLaunchpad",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/launchpad.jpg",
-      video: "",
-    },
-    {
-      title: "Wallet Adapter",
-      href: "https://rohan-wallet-adapter.vercel.app/",
-      dates: "September 2024- October 2024",
-      active: true,
-      description:
-        "Developed an Wallet Adapter which lets you airdrop SOL, create multiple ETH and SOL wallets ,transfer",
-      technologies: [
-        "React.js",
-        "Javascript",
-        "Web3.js",
-        "Ethers.js",
-        "TailwindCSS",
-        "Solana Wallet Adapter",
-        "Jupiter API",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://rohan-wallet-adapter.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/RohanCreations/Wallet-Adapter",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/adapter.jpg",
-      video: "",
-    },
-    {
-      title: "Portfolio",
-      href: "https://rohanbuilds.vercel.app/",
-      dates: "March 2025 - April 2025",
-      active: true,
-      description:
-        "Created my new portfolio website to showcase myself and my work.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/Rohan-Singla/Portfolio",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/portfolio.jpg",
-      video:
-        "",
     },
   ],
   hackathons: [
