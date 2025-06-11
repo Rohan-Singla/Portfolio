@@ -240,6 +240,57 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Perplexity AI Hackathon",
+      dates: "May 1st - 30th, 2025",
+      location: "Remote,Online",
+      description:
+        "Developed Finlearn AI an platform to upscale your learning.",
+      image:
+        "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/435/465/datas/gallery.jpg",
+      mlh: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/435/465/datas/gallery.jpg",
+      links: [
+        {
+          title: "Demo",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://youtu.be/bvVVK2Degio",
+        },
+      ],
+    },
+    {
+      title: "Colosseum Breakout Hackathon",
+      dates: "April 10th - May 10th, 2025",
+      location: "Remote,Online",
+      description:
+        "Developed ABS Finance an DeFi Platform to optimize your yield.",
+      image:
+        "https://static.narrative-violation.com/2wR8ZX49Q4ekUMm_PotAl",
+      mlh: "https://static.narrative-violation.com/2wR8ZX49Q4ekUMm_PotAl",
+      links: [
+        {
+          title: "Demo",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://www.youtube.com/watch?v=mNUVM8me7r0",
+        },
+      ],
+    },
+    {
+      title: "Redacted Hackathon",
+      dates: "April 1st - April 20th, 2025",
+      location: "Remote,Online",
+      description:
+        "Developed Solanautics an tool built which helps you stay updated , track wallets , smart money tracking , price alerts.",
+      image:
+        "/reward.jpg",
+      mlh: "/reward.jpg",
+      links: [
+        {
+          title: "Demo",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://www.loom.com/share/9f1c5a2fea9240f5a46d0d2b3f05d529",
+        },
+      ],
+    },
+    {
       title: "Metamove Hackathon",
       dates: "March 1st - 30th, 2025",
       location: "Remote,Online",
