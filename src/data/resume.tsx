@@ -8,9 +8,9 @@ export const DATA = {
   location: "Punjab, IN",
   locationLink: "https://www.google.com/maps/place/punjab",
   description:
-    "A Full Stack Web3 Developer. I love building things and Learning new things. Build In Public",
+    "Full Stack Web3 Developer. I love building things and learning new things. Building in public.",
   summary:
-    "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started out as a freelancer, diving into blockchain, building dApps, and contributing in Web3 . Actively participating in hackathons and events , I&apos;ve explored DeFi , Social , Gaming always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond. 🚀",
+    "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started out as a freelancer, diving into blockchain, building dApps, and contributing in Web3. Actively participating in hackathons and events, I've explored DeFi, Social, and Gaming — always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond.",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
@@ -52,19 +52,17 @@ export const DATA = {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/rohan-singla100/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
         url: "https://x.com/rohanBuilds",
         icon: Icons.x,
-
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "http://rohansinglawork@gmail.com/",
+        url: "mailto:rohansinglawork@gmail.com",
         icon: Icons.email,
         navbar: true,
       },
@@ -82,7 +80,7 @@ export const DATA = {
       start: "Sep 2024",
       end: "Present",
       description:
-        "As a frontend and web3 dev, I built the whole frontend for company's products with client side blockchain integrations like wallets , payments etc...",
+        "Built the complete frontend for the company's products with client-side blockchain integrations — wallets, payments, and on-chain interactions.",
     },
     {
       company: "Aranyaaa",
@@ -94,7 +92,7 @@ export const DATA = {
       start: "June 2024",
       end: "Sep 2024",
       description:
-        "As a backend developer, I developed the whole backend for Aranyaaa's clothing web application using PHP and MySQL.",
+        "Developed the entire backend for Aranyaaa's clothing web application using PHP and MySQL.",
     },
     {
       company: "AngelBells",
@@ -106,7 +104,7 @@ export const DATA = {
       start: "January 2024",
       end: "June 2024",
       description:
-        "As a marketer and dev , I helped the company in increasing the sales on marketplaces, also developed the whole web application .",
+        "Helped the company increase sales on marketplaces and developed the full web application from scratch.",
     },
   ],
   projects: [
@@ -116,7 +114,7 @@ export const DATA = {
       dates: "May 2025 - June 2025",
       active: true,
       description:
-        "When the Perplexity AI Hackathon got announed , I and my team developed Finlearn AI an platform adapts to your learning style and financial goals, delivering personalized education that sticks",
+        "For the Perplexity AI Hackathon, my team and I built Finlearn AI — a platform that adapts to your learning style and financial goals, delivering personalized education that sticks.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -148,7 +146,7 @@ export const DATA = {
       dates: "April 2025 - May 2025",
       active: true,
       description:
-        "When the Breakout Hackathon by Colosseum got announed , I and my team developed ABS Finance an tool which  uses AI models to find and allocate your assets to the highest-yielding opportunities across solana and all the vaults.",
+        "For the Breakout Hackathon by Colosseum, my team and I built ABS Finance — an AI-powered tool that finds and allocates your assets to the highest-yielding opportunities across Solana vaults.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -180,7 +178,7 @@ export const DATA = {
       dates: "April 2025 - May 2025",
       active: true,
       description:
-        "When the Redacted Hackathon by Solana got announed , I and my team developed Solanautics an tool built using Solscan which helps you stay updated , track wallets , smart money tracking , price alerts. Also won 3rd position with 500$.",
+        "For the Redacted Hackathon by Solana, my team and I built Solanautics — a tool using the Solscan API that helps you stay updated, track wallets, follow smart money, and set price alerts. Won 3rd place.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -211,7 +209,7 @@ export const DATA = {
       dates: "March 2025 - April 2025",
       active: true,
       description:
-        "When the Metamove AI Hackathon got announed , I and my team developed ApturaX an AI Agent built on Aptos for X which gives real time updates about Aptos chain.",
+        "For the Metamove AI Hackathon, my team and I built ApturaX — an AI Agent on Aptos for X (Twitter) that delivers real-time updates about the Aptos chain.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -242,9 +240,9 @@ export const DATA = {
     {
       title: "Perplexity AI Hackathon",
       dates: "May 1st - 30th, 2025",
-      location: "Remote,Online",
+      location: "Remote, Online",
       description:
-        "Developed Finlearn AI an platform to upscale your learning.",
+        "Developed Finlearn AI, a platform to personalize financial education.",
       image:
         "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/435/465/datas/gallery.jpg",
       mlh: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/435/465/datas/gallery.jpg",
@@ -259,9 +257,9 @@ export const DATA = {
     {
       title: "Colosseum Breakout Hackathon",
       dates: "April 10th - May 10th, 2025",
-      location: "Remote,Online",
+      location: "Remote, Online",
       description:
-        "Developed ABS Finance an DeFi Platform to optimize your yield.",
+        "Developed ABS Finance, a DeFi platform to optimize your yield on Solana.",
       image:
         "https://static.narrative-violation.com/2wR8ZX49Q4ekUMm_PotAl",
       mlh: "https://static.narrative-violation.com/2wR8ZX49Q4ekUMm_PotAl",
@@ -276,11 +274,11 @@ export const DATA = {
     {
       title: "Redacted Hackathon",
       dates: "April 1st - April 20th, 2025",
-      location: "Remote,Online",
+      location: "Remote, Online",
       description:
-        "Developed Solanautics an tool built which helps you stay updated , track wallets , smart money tracking , price alerts.",
-      image:
-        "/reward.jpg",
+        "Developed Solanautics, a wallet tracking and smart money tool built on Solscan.",
+      win: "3rd Place · $500",
+      image: "/reward.jpg",
       mlh: "/reward.jpg",
       links: [
         {
@@ -293,9 +291,9 @@ export const DATA = {
     {
       title: "Metamove Hackathon",
       dates: "March 1st - 30th, 2025",
-      location: "Remote,Online",
+      location: "Remote, Online",
       description:
-        "Developed ApturaX an Twitter AI Agent built on Aptos.",
+        "Developed ApturaX, a Twitter AI Agent built on the Aptos chain.",
       image:
         "https://pbs.twimg.com/profile_images/1899451259234516994/F4_kXkWh_200x200.jpg",
       mlh: "https://pbs.twimg.com/profile_images/1899451259234516994/F4_kXkWh_200x200.jpg",
@@ -310,9 +308,9 @@ export const DATA = {
     {
       title: "Solana Radar",
       dates: "October 3rd - November 10th, 2024",
-      location: "Remote,Online",
+      location: "Remote, Online",
       description:
-        "Developed a onchain lending platform in DeFi which helps people earn yield.",
+        "Developed an on-chain lending platform in DeFi that helps people earn yield.",
       image:
         "https://aethir.com/icon.svg?a61a75a286780336",
       mlh: "https://aethir.com/icon.svg?a61a75a286780336",

@@ -25,7 +25,7 @@ export default function Page() {
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] md:text-xl text-muted-foreground"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
@@ -82,7 +82,13 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge
+                  key={skill}
+                  variant="secondary"
+                  className="dark:bg-violet-500/10 dark:text-violet-300 dark:border dark:border-violet-500/20 hover:dark:bg-violet-500/20 transition-colors"
+                >
+                  {skill}
+                </Badge>
               </BlurFade>
             ))}
           </div>
@@ -93,7 +99,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 px-3 py-1 text-sm font-medium">
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -134,18 +140,17 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 px-3 py-1 text-sm font-medium">
                   Hackathons
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I love participating in hackathons, I have participated and built projects in{" "}
-                  {DATA.hackathons.length}+ hackathons till now . Love to collaborate with People from around the
-                  globe come together and build. Absolutely lovely to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  I love participating in hackathons. I&apos;ve built projects in{" "}
+                  {DATA.hackathons.length}+ hackathons — collaborating with people
+                  from around the globe and seeing what motivated individuals
+                  can build together.
                 </p>
               </div>
             </div>
@@ -163,6 +168,7 @@ export default function Page() {
                     location={project.location}
                     dates={project.dates}
                     image={project.image}
+                    win={"win" in project ? project.win : undefined}
                     links={project.links}
                   />
                 </BlurFade>
@@ -175,20 +181,21 @@ export default function Page() {
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              <div className="inline-block rounded-lg bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 px-3 py-1 text-sm font-medium">
                 Contact
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a DM on any social or book a call{" "}
+                Want to chat? Just shoot me a DM on any social or{" "}
                 <Link
                   href="https://linktr.ee/rohanBuilds"
-                  className="text-blue-500 hover:underline"
+                  className="text-violet-500 dark:text-violet-400 hover:underline"
                 >
-                  Connect here
-                </Link>{" "} Let&apos;s get in touch and build together.
+                  connect here
+                </Link>
+                {" "}— let&apos;s build something together.
               </p>
             </div>
           </BlurFade>
