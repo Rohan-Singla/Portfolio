@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { PortfolioData, WorkEntry, ProjectEntry, HackathonEntry, ProjectLink, HackathonLink } from "@/lib/portfolio-data";
+import type { PortfolioData, WorkEntry, ProjectEntry, HackathonEntry, EducationEntry, ProjectLink, HackathonLink } from "@/lib/portfolio-data";
 
-type Tab = "work" | "skills" | "projects" | "hackathons";
+type Tab = "work" | "education" | "skills" | "projects" | "hackathons";
 
 const ICON_OPTIONS = ["github", "youtube", "globe"];
 
@@ -86,6 +86,63 @@ function WorkSection({ data, setData }: { data: PortfolioData; setData: React.Di
                   <Field label="Logo URL" value={w.logoUrl} onChange={(v) => update(i, "logoUrl", v)} placeholder="/company.png" />
                 </div>
                 <Field label="Description" value={w.description} onChange={(v) => update(i, "description", v)} multiline />
+                <button onClick={() => remove(i)} className="text-xs text-red-400 hover:text-red-300 transition-colors">Remove entry</button>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function EducationSection({ data, setData }: { data: PortfolioData; setData: React.Dispatch<React.SetStateAction<PortfolioData>> }) {
+  const [expanded, setExpanded] = useState<number | null>(null);
+
+  const update = (i: number, field: keyof EducationEntry, value: string) => {
+    setData((d) => {
+      const education = [...d.education];
+      education[i] = { ...education[i], [field]: value };
+      return { ...d, education };
+    });
+  };
+
+  const remove = (i: number) => {
+    setData((d) => ({ ...d, education: d.education.filter((_, idx) => idx !== i) }));
+    setExpanded(null);
+  };
+
+  const add = () => {
+    setData((d) => ({
+      ...d,
+      education: [...d.education, { school: "New School", href: "", degree: "Degree / Course", logoUrl: "", start: "", end: "" }],
+    }));
+    setExpanded(data.education.length);
+  };
+
+  return (
+    <div>
+      <SectionHeader title="Education" onAdd={add} />
+      <div className="space-y-2">
+        {data.education.map((edu, i) => (
+          <div key={i} className="border border-white/10 rounded-xl overflow-hidden">
+            <button onClick={() => setExpanded(expanded === i ? null : i)} className="w-full flex items-center justify-between px-4 py-3 hover:bg-white/3 transition-colors text-left">
+              <div>
+                <span className="font-medium text-white text-sm">{edu.school}</span>
+                <span className="text-white/40 text-xs ml-2">{edu.degree}</span>
+              </div>
+              <span className="text-white/30 text-xs">{expanded === i ? "▲" : "▼"}</span>
+            </button>
+            {expanded === i && (
+              <div className="px-4 pb-4 space-y-3 border-t border-white/10 pt-3">
+                <div className="grid grid-cols-2 gap-3">
+                  <Field label="School / Institution" value={edu.school} onChange={(v) => update(i, "school", v)} />
+                  <Field label="Degree / Course" value={edu.degree} onChange={(v) => update(i, "degree", v)} />
+                  <Field label="Start Year" value={edu.start} onChange={(v) => update(i, "start", v)} placeholder="2021" />
+                  <Field label="End Year" value={edu.end} onChange={(v) => update(i, "end", v)} placeholder="2025" />
+                  <Field label="School URL" value={edu.href} onChange={(v) => update(i, "href", v)} placeholder="https://..." />
+                  <Field label="Logo URL" value={edu.logoUrl} onChange={(v) => update(i, "logoUrl", v)} placeholder="/school.png" />
+                </div>
                 <button onClick={() => remove(i)} className="text-xs text-red-400 hover:text-red-300 transition-colors">Remove entry</button>
               </div>
             )}
@@ -356,7 +413,7 @@ export default function Dashboard() {
     );
   }
 
-  const tabs: Tab[] = ["work", "skills", "projects", "hackathons"];
+  const tabs: Tab[] = ["work", "education", "skills", "projects", "hackathons"];
 
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-white">
@@ -402,7 +459,7 @@ export default function Dashboard() {
           >
             {tab}
             <span className="ml-1.5 text-xs opacity-50">
-              ({tab === "work" ? data.work.length : tab === "skills" ? data.skills.length : tab === "projects" ? data.projects.length : data.hackathons.length})
+              ({tab === "work" ? data.work.length : tab === "education" ? data.education.length : tab === "skills" ? data.skills.length : tab === "projects" ? data.projects.length : data.hackathons.length})
             </span>
           </button>
         ))}
@@ -411,6 +468,7 @@ export default function Dashboard() {
       {/* Content */}
       <div className="max-w-3xl mx-auto px-6 py-8">
         {activeTab === "work" && <WorkSection data={data} setData={setData as React.Dispatch<React.SetStateAction<PortfolioData>>} />}
+        {activeTab === "education" && <EducationSection data={data} setData={setData as React.Dispatch<React.SetStateAction<PortfolioData>>} />}
         {activeTab === "skills" && <SkillsSection data={data} setData={setData as React.Dispatch<React.SetStateAction<PortfolioData>>} />}
         {activeTab === "projects" && <ProjectsSection data={data} setData={setData as React.Dispatch<React.SetStateAction<PortfolioData>>} />}
         {activeTab === "hackathons" && <HackathonsSection data={data} setData={setData as React.Dispatch<React.SetStateAction<PortfolioData>>} />}

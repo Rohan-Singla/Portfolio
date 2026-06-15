@@ -253,5 +253,15 @@
       "image": "https://aethir.com/icon.svg?a61a75a286780336",
       "links": []
     }
+  ],
+  "education": [
+    {
+      "school": "Your University / Institution",
+      "href": "",
+      "degree": "Your Degree / Course",
+      "logoUrl": "",
+      "start": "20XX",
+      "end": "20XX"
+    }
   ]
 }

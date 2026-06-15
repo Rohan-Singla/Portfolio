@@ -26,7 +26,7 @@ export function HackathonCard({
   links,
 }: Props) {
   return (
-    <li className="relative ml-10 py-4">
+    <li className={`relative ml-10 py-4 ${win ? "pl-3 -ml-3 ml-[28px] border-l-2 border-amber-500/40" : ""}`}>
       <div className="absolute -left-16 top-2 flex items-center justify-center bg-background rounded-full">
         <Avatar className="border size-12 m-auto">
           <AvatarImage src={image} alt={title} className="object-contain" />

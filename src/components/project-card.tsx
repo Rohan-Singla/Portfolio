@@ -48,7 +48,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "group flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+        "group flex flex-col overflow-hidden border hover:shadow-lg hover:shadow-violet-500/10 hover:border-violet-500/30 transition-all duration-300 ease-out h-full"
       }
     >
       <Link
@@ -71,7 +71,7 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            className="h-48 w-full overflow-hidden object-cover object-top transition-transform duration-300 group-hover:scale-105"
           />
         )}
       </Link>

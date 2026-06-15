@@ -12,6 +12,7 @@ export const DATA = {
   summary:
     "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started out as a freelancer, diving into blockchain, building dApps, and contributing in Web3. Actively participating in hackathons and events, I've explored DeFi, Social, and Gaming — always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond.",
   avatarUrl: "/current.jpeg",
+  openToWork: true,
   skills: [
     "React",
     "Next.js",

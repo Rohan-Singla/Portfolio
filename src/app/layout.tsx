@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { CommandPalette } from "@/components/command-palette";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
@@ -16,7 +17,6 @@ const fontSans = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    
     default: DATA.name,
     template: `%s | ${DATA.name}`,
   },
@@ -67,6 +67,7 @@ export default function RootLayout({
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
+            <CommandPalette />
           </TooltipProvider>
         </ThemeProvider>
       </body>

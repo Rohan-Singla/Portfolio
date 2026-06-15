@@ -49,11 +49,21 @@ export type HackathonEntry = {
   links: HackathonLink[];
 };
 
+export type EducationEntry = {
+  school: string;
+  href: string;
+  degree: string;
+  logoUrl: string;
+  start: string;
+  end: string;
+};
+
 export type PortfolioData = {
   work: WorkEntry[];
   skills: string[];
   projects: ProjectEntry[];
   hackathons: HackathonEntry[];
+  education: EducationEntry[];
 };
 
 export function getPortfolioData(): PortfolioData {

@@ -16,6 +16,13 @@ export const dynamic = "force-dynamic";
 
 const BLUR_FADE_DELAY = 0.04;
 
+const SKILL_GROUPS: Record<string, string[]> = {
+  Frontend: ["React", "Next.js", "Typescript", "Javascript", "CSS", "Tailwind", "Bootstrap", "Shadcn"],
+  Backend: ["Node.js", "Python", "PHP", "Postgres", "MySQL", "MongoDB", "Prisma", "Drizzle", "WebSockets"],
+  Blockchain: ["Ethers.js", "Web3.js"],
+  DevOps: ["Docker", "Kubernetes", "Git"],
+};
+
 const projectIconMap: Record<string, React.ReactNode> = {
   github: <Icons.github className="size-3" />,
   youtube: <Icons.youtube className="size-3" />,
@@ -29,13 +36,25 @@ const hackathonIconMap: Record<string, React.ReactNode> = {
 
 export default function Page() {
   const portfolio = getPortfolioData();
+  const winsCount = portfolio.hackathons.filter((h) => h.win).length;
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
+            <div className="flex-col flex flex-1 space-y-2">
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                {DATA.openToWork && (
+                  <div className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20 mb-1">
+                    <span className="relative flex size-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                      <span className="relative inline-flex size-1.5 rounded-full bg-green-500" />
+                    </span>
+                    Available for opportunities
+                  </div>
+                )}
+              </BlurFade>
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
@@ -47,6 +66,25 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <div className="flex items-center gap-3 pt-1">
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-violet-500/30 text-violet-400 hover:bg-violet-500/10 transition-colors"
+                  >
+                    <svg className="size-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Resume
+                  </a>
+                  <span className="text-xs text-muted-foreground/50 hidden sm:inline">
+                    Press{" "}
+                    <kbd className="px-1.5 py-0.5 rounded bg-muted text-muted-foreground font-mono text-[10px]">⌘K</kbd>
+                    {" "}to navigate
+                  </span>
+                </div>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border-2 border-violet-500/30 ring-2 ring-violet-500/20 ring-offset-2 ring-offset-background">
@@ -61,6 +99,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
@@ -70,50 +109,119 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+          <div className="grid grid-cols-3 gap-3 mt-4">
+            {[
+              { value: "2+", label: "Years building" },
+              { value: `${portfolio.hackathons.length}+`, label: "Hackathons" },
+              { value: `${winsCount}`, label: winsCount === 1 ? "Award won" : "Awards won" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="flex flex-col items-center justify-center p-3 rounded-xl bg-violet-500/5 border border-violet-500/10 text-center"
+              >
+                <span className="text-2xl font-bold text-violet-400">{stat.value}</span>
+                <span className="text-xs text-muted-foreground mt-0.5">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </BlurFade>
       </section>
+
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
-          {portfolio.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {portfolio.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge
-                  variant="secondary"
-                  className="dark:bg-violet-500/10 dark:text-violet-300 dark:border dark:border-violet-500/20 hover:dark:bg-violet-500/20 transition-colors"
-                >
-                  {skill}
-                </Badge>
+          <div className="relative pl-6 border-l border-border space-y-8">
+            {portfolio.work.map((work, id) => (
+              <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+                <div className="relative">
+                  <div className="absolute -left-[25px] top-1.5 size-3 rounded-full border-2 border-violet-500 bg-background" />
+                  <div className="flex items-start gap-3">
+                    <Avatar className="size-9 border flex-shrink-0 mt-0.5 bg-muted">
+                      <AvatarImage src={work.logoUrl} alt={work.company} className="object-contain" />
+                      <AvatarFallback className="text-xs">{work.company[0]}</AvatarFallback>
+                    </Avatar>
+                    <div className="flex-1 min-w-0 space-y-1">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <h3 className="font-semibold text-sm leading-none">{work.company}</h3>
+                        <span className="text-xs text-muted-foreground tabular-nums shrink-0">
+                          {work.start} – {work.end ?? "Present"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        {work.title}
+                        {work.location ? ` · ${work.location}` : ""}
+                      </p>
+                      {work.description && (
+                        <p className="text-sm text-muted-foreground/80 leading-relaxed pt-1">
+                          {work.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </BlurFade>
             ))}
           </div>
         </div>
       </section>
+
+      <section id="education">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Education</h2>
+          </BlurFade>
+          {portfolio.education.map((edu, id) => (
+            <BlurFade key={edu.school} delay={BLUR_FADE_DELAY * 7.5 + id * 0.05}>
+              <ResumeCard
+                logoUrl={edu.logoUrl}
+                altText={edu.school}
+                title={edu.school}
+                subtitle={edu.degree}
+                href={edu.href}
+                period={`${edu.start} - ${edu.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+
+      <section id="skills">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Skills</h2>
+          </BlurFade>
+          <div className="space-y-4">
+            {Object.entries(SKILL_GROUPS).map(([category, categorySkills], groupIdx) => {
+              const available = portfolio.skills.filter((s) => categorySkills.includes(s));
+              if (!available.length) return null;
+              return (
+                <BlurFade key={category} delay={BLUR_FADE_DELAY * 10 + groupIdx * 0.08}>
+                  <div className="space-y-2">
+                    <p className="text-[11px] font-semibold text-violet-400/70 uppercase tracking-widest">
+                      {category}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {available.map((skill) => (
+                        <Badge
+                          key={skill}
+                          variant="secondary"
+                          className="dark:bg-violet-500/10 dark:text-violet-300 dark:border dark:border-violet-500/20 hover:dark:bg-violet-500/20 transition-colors"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </BlurFade>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <section id="github">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
@@ -124,6 +232,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -136,19 +245,15 @@ export default function Page() {
                   Check out my latest work
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  recents.
+                  I&apos;ve worked on a variety of projects, from simple websites to complex web
+                  applications. Here are a few of my recents.
                 </p>
               </div>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {portfolio.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
+              <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
                 <ProjectCard
                   href={project.href}
                   title={project.title}
@@ -168,6 +273,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -181,9 +287,8 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I love participating in hackathons. I&apos;ve built projects in{" "}
-                  {portfolio.hackathons.length}+ hackathons — collaborating with people
-                  from around the globe and seeing what motivated individuals
-                  can build together.
+                  {portfolio.hackathons.length}+ hackathons — collaborating with people from around
+                  the globe and seeing what motivated individuals can build together.
                 </p>
               </div>
             </div>
@@ -191,10 +296,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {portfolio.hackathons.map((h, id) => (
-                <BlurFade
-                  key={h.title + h.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
+                <BlurFade key={h.title + h.dates} delay={BLUR_FADE_DELAY * 15 + id * 0.05}>
                   <HackathonCard
                     title={h.title}
                     description={h.description}
@@ -214,6 +316,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
