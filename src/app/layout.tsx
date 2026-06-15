@@ -16,6 +16,7 @@ const fontSans = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
+    
     default: DATA.name,
     template: `%s | ${DATA.name}`,
   },

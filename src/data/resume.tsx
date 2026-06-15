@@ -11,7 +11,7 @@ export const DATA = {
     "Full Stack Web3 Developer. I love building things and learning new things. Building in public.",
   summary:
     "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started out as a freelancer, diving into blockchain, building dApps, and contributing in Web3. Actively participating in hackathons and events, I've explored DeFi, Social, and Gaming — always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond.",
-  avatarUrl: "/me.jpg",
+  avatarUrl: "/current.jpeg",
   skills: [
     "React",
     "Next.js",

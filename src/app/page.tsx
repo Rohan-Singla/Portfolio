@@ -1,3 +1,4 @@
+import { GithubGraph } from "@/components/github-graph";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -31,8 +32,12 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+              <Avatar className="size-28 border-2 border-violet-500/30 ring-2 ring-violet-500/20 ring-offset-2 ring-offset-background">
+                <AvatarImage
+                  alt={DATA.name}
+                  src={DATA.avatarUrl}
+                  className="object-cover object-top"
+                />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -92,6 +97,16 @@ export default function Page() {
               </BlurFade>
             ))}
           </div>
+        </div>
+      </section>
+      <section id="github">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+            <h2 className="text-xl font-bold">GitHub Activity</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 10.7}>
+            <GithubGraph username={DATA.contact.social.GitHub.url.split("/").pop()!} />
+          </BlurFade>
         </div>
       </section>
       <section id="projects">
