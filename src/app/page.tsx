@@ -6,13 +6,30 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Icons } from "@/components/icons";
 import { DATA } from "@/data/resume";
+import { getPortfolioData } from "@/lib/portfolio-data";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
+export const dynamic = "force-dynamic";
+
 const BLUR_FADE_DELAY = 0.04;
 
+const projectIconMap: Record<string, React.ReactNode> = {
+  github: <Icons.github className="size-3" />,
+  youtube: <Icons.youtube className="size-3" />,
+  globe: <Icons.globe className="size-3" />,
+};
+
+const hackathonIconMap: Record<string, React.ReactNode> = {
+  github: <Icons.github className="h-4 w-4" />,
+  youtube: <Icons.youtube className="h-4 w-4" />,
+};
+
 export default function Page() {
+  const portfolio = getPortfolioData();
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -59,13 +76,12 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
-          {DATA.work.map((work, id) => (
+          {portfolio.work.map((work, id) => (
             <BlurFade
               key={work.company}
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -85,10 +101,9 @@ export default function Page() {
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
+            {portfolio.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <Badge
-                  key={skill}
                   variant="secondary"
                   className="dark:bg-violet-500/10 dark:text-violet-300 dark:border dark:border-violet-500/20 hover:dark:bg-violet-500/20 transition-colors"
                 >
@@ -129,21 +144,24 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
+            {portfolio.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}
-                  key={project.title}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
                   video={project.video}
-                  links={project.links}
+                  links={project.links.map((l) => ({
+                    type: l.type,
+                    href: l.href,
+                    icon: projectIconMap[l.icon] ?? <Icons.globe className="size-3" />,
+                  }))}
                 />
               </BlurFade>
             ))}
@@ -163,7 +181,7 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I love participating in hackathons. I&apos;ve built projects in{" "}
-                  {DATA.hackathons.length}+ hackathons — collaborating with people
+                  {portfolio.hackathons.length}+ hackathons — collaborating with people
                   from around the globe and seeing what motivated individuals
                   can build together.
                 </p>
@@ -172,19 +190,23 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
+              {portfolio.hackathons.map((h, id) => (
                 <BlurFade
-                  key={project.title + project.dates}
+                  key={h.title + h.dates}
                   delay={BLUR_FADE_DELAY * 15 + id * 0.05}
                 >
                   <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    win={"win" in project ? project.win : undefined}
-                    links={project.links}
+                    title={h.title}
+                    description={h.description}
+                    location={h.location}
+                    dates={h.dates}
+                    image={h.image}
+                    win={h.win || undefined}
+                    links={h.links.map((l) => ({
+                      title: l.title,
+                      href: l.href,
+                      icon: hackathonIconMap[l.icon] ?? <Icons.globe className="h-4 w-4" />,
+                    }))}
                   />
                 </BlurFade>
               ))}

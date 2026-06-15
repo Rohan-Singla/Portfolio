@@ -60,6 +60,12 @@ export const DATA = {
         icon: Icons.x,
         navbar: true,
       },
+      Medium: {
+        name: "Medium",
+        url: "https://medium.com/@rohansinglawork",
+        icon: Icons.medium,
+        navbar: true,
+      },
       email: {
         name: "Send Email",
         url: "mailto:rohansinglawork@gmail.com",
