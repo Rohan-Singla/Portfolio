@@ -67,22 +67,17 @@ export default function Page() {
                 text={DATA.description}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <div className="flex items-center gap-3 pt-1">
+                <div className="flex items-center gap-3 pt-2">
                   <a
                     href="/resume.pdf"
                     target="_blank"
-                    className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-violet-500/30 text-violet-400 hover:bg-violet-500/10 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 text-white transition-colors shadow-sm shadow-violet-500/20"
                   >
-                    <svg className="size-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    Resume
+                    Download Resume
                   </a>
-                  <span className="text-xs text-muted-foreground/50 hidden sm:inline">
-                    Press{" "}
-                    <kbd className="px-1.5 py-0.5 rounded bg-muted text-muted-foreground font-mono text-[10px]">⌘K</kbd>
-                    {" "}to navigate
-                  </span>
                 </div>
               </BlurFade>
             </div>
@@ -105,7 +100,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base leading-relaxed text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -155,7 +150,7 @@ export default function Page() {
                         {work.location ? ` · ${work.location}` : ""}
                       </p>
                       {work.description && (
-                        <p className="text-sm text-muted-foreground/80 leading-relaxed pt-1">
+                        <p className="text-sm text-muted-foreground leading-relaxed pt-1">
                           {work.description}
                         </p>
                       )}
@@ -173,18 +168,33 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
-          {portfolio.education.map((edu, id) => (
-            <BlurFade key={edu.school} delay={BLUR_FADE_DELAY * 7.5 + id * 0.05}>
-              <ResumeCard
-                logoUrl={edu.logoUrl}
-                altText={edu.school}
-                title={edu.school}
-                subtitle={edu.degree}
-                href={edu.href}
-                period={`${edu.start} - ${edu.end}`}
-              />
-            </BlurFade>
-          ))}
+          <div className={`grid gap-3 ${portfolio.education.length > 1 ? "sm:grid-cols-2" : "grid-cols-1"}`}>
+            {portfolio.education.map((edu, id) => (
+              <BlurFade key={edu.school} delay={BLUR_FADE_DELAY * 7.5 + id * 0.05}>
+                <a
+                  href={edu.href || undefined}
+                  target={edu.href ? "_blank" : undefined}
+                  className={`flex items-start gap-4 p-4 rounded-xl border border-border hover:border-violet-500/30 bg-card transition-colors group ${edu.href ? "cursor-pointer" : "cursor-default"}`}
+                >
+                  <Avatar className="size-12 border flex-shrink-0 bg-muted">
+                    <AvatarImage src={edu.logoUrl} alt={edu.school} className="object-contain" />
+                    <AvatarFallback className="text-sm font-bold text-muted-foreground">
+                      {edu.school[0]}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-sm leading-tight group-hover:text-violet-400 transition-colors">
+                      {edu.school}
+                    </h3>
+                    <p className="text-xs text-muted-foreground mt-1">{edu.degree}</p>
+                    <p className="text-xs text-muted-foreground/50 mt-1 tabular-nums">
+                      {edu.start} – {edu.end}
+                    </p>
+                  </div>
+                </a>
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
 

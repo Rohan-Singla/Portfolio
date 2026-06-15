@@ -49,7 +49,7 @@ export function HackathonCard({
           <p className="text-sm text-muted-foreground">{location}</p>
         )}
         {description && (
-          <span className="prose dark:prose-invert text-sm text-muted-foreground">
+          <span className="text-sm text-muted-foreground leading-relaxed">
             {description}
           </span>
         )}
