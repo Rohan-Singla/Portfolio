@@ -14,20 +14,58 @@ const fontSans = Space_Grotesk({
   variable: "--font-sans",
 });
 
+const SEO_DESCRIPTION =
+  "Rohan Singla is a Full Stack and Solana engineer building DeFi protocols, blockchain dApps, and scalable backend systems. 10+ hackathons, 2 prizes won. Open to opportunities.";
+
+const SEO_KEYWORDS = [
+  "Rohan Singla",
+  "Full Stack Developer",
+  "Solana Developer",
+  "Rust Developer",
+  "Backend Engineer",
+  "Web3 Developer",
+  "Blockchain Developer",
+  "DeFi Developer",
+  "Next.js Developer",
+  "India Developer",
+  "rohanbuilds",
+  "Anchor smart contracts",
+  "Solana dApp",
+  "DevOps Engineer",
+];
+
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} | Full Stack & Solana Engineer`,
     template: `%s | ${DATA.name}`,
   },
-  description: DATA.description,
+  description: SEO_DESCRIPTION,
+  keywords: SEO_KEYWORDS,
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
+    title: `${DATA.name} | Full Stack & Solana Engineer`,
+    description: SEO_DESCRIPTION,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/api/og",
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name} — Full Stack & Solana Engineer`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${DATA.name} | Full Stack & Solana Engineer`,
+    description: SEO_DESCRIPTION,
+    creator: "@rohanBuilds",
+    images: ["/api/og"],
   },
   robots: {
     index: true,
@@ -40,14 +78,33 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
+  alternates: {
+    canonical: DATA.url,
   },
   verification: {
     google: "",
-    yandex: "",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: DATA.name,
+  url: DATA.url,
+  image: `${DATA.url}/current.jpeg`,
+  jobTitle: "Full Stack & Solana Engineer",
+  description: SEO_DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Delhi",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://github.com/Rohan-Singla",
+    "https://www.linkedin.com/in/rohan-singla100/",
+    "https://x.com/rohanBuilds",
+    "https://medium.com/@rohansinglawork",
+  ],
 };
 
 export default function RootLayout({
@@ -57,6 +114,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",

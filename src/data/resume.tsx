@@ -4,11 +4,11 @@ import { HomeIcon } from "lucide-react";
 export const DATA = {
   name: "Rohan Singla",
   initials: "RS",
-  url: "https://rohanbuilds.vercel.app/",
-  location: "Delhi, Greater Noida IN",
+  url: "https://rohanbuilds.xyz",
+  location: "Delhi, Greater Noida, IN",
   locationLink: "https://www.google.com/maps/place/punjab",
   description:
-    "Full Stack | Rust | Backend/Infra | Solana Engineer",
+    "Full Stack & Solana Engineer | Rust · Backend · Infra · DeFi",
   summary:
     "In 2023, I shifted from being a **Graphic Designer & Digital Marketer** to build **scalable backend services** and **blockchain dApps**. Experienced in **Web2 and Web3 Development** with a growing focus on **Rust**, **Infra**, **System Design**, and **DevOps**. Passionate about **open source**, continuous learning, and solving challenging engineering problems at scale.",
   avatarUrl: "/current.jpeg",

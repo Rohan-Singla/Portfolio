@@ -1,9 +1,5 @@
-//robots.txt
- 
-# Block all crawlers for /accounts
 User-agent: *
-Disallow: /accounts
- 
-# Allow all crawlers
-User-agent: *
+Disallow: /admin
 Allow: /
+
+Sitemap: https://rohanbuilds.xyz/sitemap.xml
