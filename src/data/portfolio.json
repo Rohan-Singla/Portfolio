@@ -205,10 +205,75 @@
   ],
   "hackathons": [
     {
+      "title": "Solana Privacy Hackathon",
+      "dates": "Jan 12th - Feb 1st, 2026",
+      "location": "Remote, Online",
+      "description": "Built Private x402 — a privacy-preserving payment SDK for Solana implementing the HTTP 402 Payment Required protocol using Privacy Cash, enabling private API monetization on-chain.",
+      "win": "",
+      "image": "/solanalogo.png",
+      "links": [
+        {
+          "title": "Repository",
+          "href": "https://github.com/Rohan-Singla/p402",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "title": "Cypherpunk Hackathon · SuperteamIN",
+      "dates": "Oct 1st - 30th, 2025",
+      "location": "Remote, Online",
+      "description": "Built Axon — a Solana-based micropayments solution for small Bitcoin miners. Won the 100xDevs bounty track run by SuperteamIN.",
+      "win": "1st Place · $1000",
+      "image": "/stlogo.jpg",
+      "links": [
+        {
+          "title": "Repository",
+          "href": "https://github.com/Rohan-Singla/Axon",
+          "icon": "github"
+        },
+        {
+          "title": "Submission",
+          "href": "https://superteam.fun/earn/listing/100xschool-solana-hackathon-1",
+          "icon": "globe"
+        }
+      ]
+    },
+    {
+      "title": "UniteDeFi Hackathon",
+      "dates": "Jul 20th - Aug 25th, 2025",
+      "location": "Remote, Online",
+      "description": "Built TrueValue — a platform to invest in music NFTs created by artists and earn yield as the music grows in popularity. Built on SUI and Ethereum.",
+      "win": "",
+      "image": "/ethglobalogo.png",
+      "links": [
+        {
+          "title": "Repository",
+          "href": "https://github.com/Rohan-Singla/truevalue",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "title": "Google ADK Hackathon",
+      "dates": "May 16th - Jun 20th, 2025",
+      "location": "Remote, Online",
+      "description": "Built BrandVoice — an AI-powered branding and marketing platform using the Google Agent Development Kit.",
+      "win": "",
+      "image": "/googlelogo.png",
+      "links": [
+        {
+          "title": "Repository",
+          "href": "https://github.com/Rohan-Singla/BrandVoice-AI",
+          "icon": "github"
+        }
+      ]
+    },
+    {
       "title": "Perplexity AI Hackathon",
       "dates": "May 1st - 30th, 2025",
       "location": "Remote, Online",
-      "description": "Developed Finlearn AI, a platform to personalize financial education.",
+      "description": "Built Finlearn AI — a personalized financial education platform that adapts to your learning style and financial goals.",
       "win": "",
       "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/435/465/datas/gallery.jpg",
       "links": [
@@ -221,9 +286,9 @@
     },
     {
       "title": "Colosseum Breakout Hackathon",
-      "dates": "April 10th - May 10th, 2025",
+      "dates": "Apr 10th - May 10th, 2025",
       "location": "Remote, Online",
-      "description": "Developed ABS Finance, a DeFi platform to optimize your yield on Solana.",
+      "description": "Built ABS Finance — an AI-powered DeFi tool that finds and allocates assets to the highest-yielding Solana vaults automatically.",
       "win": "",
       "image": "https://static.narrative-violation.com/2wR8ZX49Q4ekUMm_PotAl",
       "links": [
@@ -235,10 +300,10 @@
       ]
     },
     {
-      "title": "Redacted Hackathon",
-      "dates": "April 1st - April 20th, 2025",
+      "title": "Redacted Hackathon · Solana",
+      "dates": "Apr 1st - 20th, 2025",
       "location": "Remote, Online",
-      "description": "Developed Solanautics, a wallet tracking and smart money tool built on Solscan.",
+      "description": "Built Solanautics — a wallet tracking and smart money tool using the Solscan API with price alerts and wallet following.",
       "win": "3rd Place · $500",
       "image": "/reward.jpg",
       "links": [
@@ -250,25 +315,25 @@
       ]
     },
     {
-      "title": "Metamove Hackathon",
-      "dates": "March 1st - 30th, 2025",
+      "title": "Metamove AI Hackathon",
+      "dates": "Mar 1st - 30th, 2025",
       "location": "Remote, Online",
-      "description": "Developed ApturaX, a Twitter AI Agent built on the Aptos chain.",
+      "description": "Built ApturaX — an AI Agent on Aptos that posts real-time chain updates to X (Twitter) automatically.",
       "win": "",
       "image": "https://pbs.twimg.com/profile_images/1899451259234516994/F4_kXkWh_200x200.jpg",
       "links": [
         {
-          "title": "Project Repo",
+          "title": "Repository",
           "href": "https://github.com/abhayporwals/aptura",
           "icon": "github"
         }
       ]
     },
     {
-      "title": "Solana Radar",
-      "dates": "October 3rd - November 10th, 2024",
+      "title": "Solana Radar Hackathon",
+      "dates": "Oct 3rd - Nov 10th, 2024",
       "location": "Remote, Online",
-      "description": "Developed an on-chain lending platform in DeFi that helps people earn yield.",
+      "description": "Built an on-chain lending platform on Solana in the DeFi track — enabling users to earn guaranteed yield on their deposits.",
       "win": "",
       "image": "https://aethir.com/icon.svg?a61a75a286780336",
       "links": []
@@ -276,49 +341,49 @@
   ],
   "education": [
     {
-      "school": "SolanaTurbine",
-      "href": "https://www.linkedin.com/company/turbin3",
-      "degree": "Builders Program Q1 2026",
-      "logoUrl": "/turbinelogo.jpg",
-      "start": "2026",
-      "end": "2026",
-      "description": "- Completed **Turbin3's Q1 2026 Builders Program** — one of the most rigorous Solana developer curricula\n- Shipped a **capstone project** and finished all weekly assignments to earn graduation\n- Deep-dived into **Anchor smart contracts**, **PDAs**, **CPIs**, and advanced **Solana architecture**\n- Joined a cohort of serious builders pushing the frontier of on-chain development"
-    },
-    {
-      "school": "Ackee Blockchain Security",
-      "href": "https://www.linkedin.com/company/ackee-blockchain/posts/?feedView=all",
-      "degree": "School of Solana — Season 7",
-      "logoUrl": "/ackee_blockchain_logo.jpeg",
-      "start": "2025",
+      "school": "Brilliko",
+      "href": "https://www.brilliko.com/",
+      "degree": "Multimedia | Web Dev",
+      "logoUrl": "/brilliko-logo.png",
+      "start": "2022",
       "end": "2025",
-      "description": "- Completed **School of Solana Season 7** by Ackee Blockchain Security\n- Built multiple **Solana on-chain projects** with a focus on correctness and security\n- Completed weekly assignments and a **capstone project** to graduate\n- Gained strong foundations in **program security**, **account validation**, and **exploit prevention**"
-    },
-    {
-      "school": "Randamu",
-      "href": "https://www.linkedin.com/company/randamu/",
-      "degree": "Threshold Cryptography Bootcamp",
-      "logoUrl": "/randamu_logo.jpeg",
-      "start": "2025",
-      "end": "2025",
-      "description": "- Attended Randamu's **Threshold Cryptography Bootcamp** — a niche, highly technical program\n- Learned core concepts of **Threshold Cryptography**, **VRFs** (Verifiable Random Functions), and **distributed key schemes**\n- Built projects using **Randamu's tooling** and explored real-world applications in **trustless randomness** and **decentralized secrets**"
+      "description": "Joined Brilliko institute after my 7th class with a lot of curiosity about tech. Started with Graphic designing then video editing and VFX , all that lead to digital marketing . After covering multi-media got into coding with python , HTML & CSS after that it became a different journey with non stop building and learning things in the world of programming built backend systems in PHP . Also landed a internship with a role of graphic designer . Also won multiple certificates and trophies in the span of 3 years ."
     },
     {
       "school": "100xDevs",
       "href": "https://www.linkedin.com/company/100xdevs/",
-      "degree": "Cohort 3 — Full Stack + DevOps + Blockchain",
+      "degree": "Cohort 3",
       "logoUrl": "/100xlogo.jpeg",
       "start": "2024",
-      "end": "2025",
-      "description": "- Completed **Cohort 3** covering **Full Stack Web Development**, **DevOps**, and **Blockchain**\n- Built and deployed production-grade **web applications** with modern tooling\n- Learned **CI/CD**, **system design**, containerization with **Docker**, and cloud deployment\n- Explored **Web3 integrations**, smart contracts, and on-chain app development"
+      "end": "",
+      "description": "Completed the Web Development + DevOps +\nBlockchain Cohort, Built and learnt about Web Application Development ,  System Deployment and Blockchain based technologies."
     },
     {
-      "school": "Brilliko Institute",
-      "href": "https://www.brilliko.com/",
-      "degree": "Multimedia & Web Development",
-      "logoUrl": "/brilliko-logo.png",
-      "start": "2022",
+      "school": "Ackee Blockchain Security",
+      "href": "https://www.linkedin.com/company/ackee-blockchain/posts/?feedView=all",
+      "degree": "School of Solana S7",
+      "logoUrl": "/ackee_blockchain_logo.jpeg",
+      "start": "2025",
       "end": "2025",
-      "description": "- Started with **Graphic Design**, **Video Editing & VFX**, and **Digital Marketing** — built a strong creative foundation\n- Transitioned into coding: **Python**, **HTML/CSS**, then **PHP** backend systems\n- Landed an **internship as a Graphic Designer** during the program\n- Won **multiple certificates and trophies** over 3 years of continuous learning and building"
+      "description": "Was a part of School of Solana S7 built multiple solana focused on-chain projects . Complete weekly assignments and a capstone eventually graduated ."
+    },
+    {
+      "school": "Randamu",
+      "href": "https://www.linkedin.com/company/randamu/",
+      "degree": "Threshold Cryptography",
+      "logoUrl": "/randamu_logo.jpeg",
+      "start": "2025",
+      "end": "2025",
+      "description": "Was part of a Randamu Threshold Cryptography bootcamp learnt a lot of things about cryptography, Threshold , VRF's etc . Learnt about Randamu tooling and built cool things."
+    },
+    {
+      "school": "SolanaTurbine",
+      "href": "https://www.linkedin.com/company/turbin3",
+      "degree": "Builders Program Q1",
+      "logoUrl": "/turbinelogo.jpg",
+      "start": "2026",
+      "end": "2026",
+      "description": "Was part of a Turbine's 2026 Builders Q1 program completed all the weekly assignments and shipped a capstone . Ultimately became a grad learnt a lot about anchor contracts and solana . "
     }
   ]
 }

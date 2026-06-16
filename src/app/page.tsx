@@ -32,6 +32,7 @@ const projectIconMap: Record<string, React.ReactNode> = {
 const hackathonIconMap: Record<string, React.ReactNode> = {
   github: <Icons.github className="h-4 w-4" />,
   youtube: <Icons.youtube className="h-4 w-4" />,
+  globe: <Icons.globe className="h-4 w-4" />,
 };
 
 export default function Page() {
@@ -108,8 +109,8 @@ export default function Page() {
           <div className="grid grid-cols-3 gap-3 mt-4">
             {[
               { value: "2+", label: "Years building" },
-              { value: `${portfolio.hackathons.length}+`, label: "Hackathons" },
-              { value: `${winsCount}`, label: winsCount === 1 ? "Award won" : "Awards won" },
+              { value: `${portfolio.hackathons.length}+`, label: "Global Hackathons" },
+              { value: `${winsCount}`, label: winsCount === 1 ? "Prize won" : "Hackathons won" },
             ].map((stat) => (
               <div
                 key={stat.label}
