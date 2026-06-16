@@ -183,35 +183,47 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
-          <div className={`grid gap-3 ${portfolio.education.length > 1 ? "sm:grid-cols-2" : "grid-cols-1"}`}>
+          <div className="relative pl-6 border-l border-border space-y-8">
             {portfolio.education.map((edu, id) => (
               <BlurFade key={edu.school} delay={BLUR_FADE_DELAY * 7.5 + id * 0.05}>
-                <a
-                  href={edu.href || undefined}
-                  target={edu.href ? "_blank" : undefined}
-                  className={`flex items-start gap-4 p-4 rounded-xl border border-border hover:border-violet-500/30 bg-card transition-colors group ${edu.href ? "cursor-pointer" : "cursor-default"}`}
-                >
-                  <Avatar className="size-12 border flex-shrink-0 bg-muted">
-                    <AvatarImage src={edu.logoUrl} alt={edu.school} className="object-contain" />
-                    <AvatarFallback className="text-sm font-bold text-muted-foreground">
-                      {edu.school[0]}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-sm leading-tight group-hover:text-violet-400 transition-colors">
-                      {edu.school}
-                    </h3>
-                    <p className="text-xs text-muted-foreground mt-1">{edu.degree}</p>
-                    <p className="text-xs text-muted-foreground/50 mt-1 tabular-nums">
-                      {edu.start} – {edu.end}
-                    </p>
-                    {edu.description && (
-                      <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                        {edu.description}
-                      </p>
-                    )}
+                <div className="relative">
+                  <div className="absolute -left-[25px] top-1.5 size-3 rounded-sm border-2 border-violet-400 bg-background" />
+                  <div className="flex items-start gap-3">
+                    <Avatar className="size-9 border flex-shrink-0 mt-0.5 bg-muted">
+                      <AvatarImage src={edu.logoUrl} alt={edu.school} className="object-contain" />
+                      <AvatarFallback className="text-xs">{edu.school[0]}</AvatarFallback>
+                    </Avatar>
+                    <div className="flex-1 min-w-0 space-y-1.5">
+                      <div className="flex items-start justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-semibold text-sm leading-none">{edu.school}</h3>
+                          {edu.href && (
+                            <a
+                              href={edu.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-md bg-violet-500/10 text-violet-400 border border-violet-500/20 hover:bg-violet-500/20 transition-colors"
+                            >
+                              <svg className="size-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                              Visit
+                            </a>
+                          )}
+                        </div>
+                        <span className="text-xs text-muted-foreground tabular-nums shrink-0">
+                          {edu.start} – {edu.end || "Present"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{edu.degree}</p>
+                      {edu.description && (
+                        <Markdown className="prose prose-sm max-w-full dark:prose-invert prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground prose-strong:font-semibold prose-p:my-0.5 prose-li:my-0 prose-ul:my-1 prose-ul:pl-4 [&>ul]:list-disc [&>ul]:space-y-0.5 pt-1 text-sm">
+                          {edu.description}
+                        </Markdown>
+                      )}
+                    </div>
                   </div>
-                </a>
+                </div>
               </BlurFade>
             ))}
           </div>

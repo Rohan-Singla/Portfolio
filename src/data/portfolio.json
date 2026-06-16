@@ -276,22 +276,49 @@
   ],
   "education": [
     {
-      "school": "Brilliko",
-      "href": "https://www.brilliko.com/",
-      "degree": "Multimedia | Web Dev",
-      "logoUrl": "/brilliko-logo.png",
-      "start": "2022",
+      "school": "SolanaTurbine",
+      "href": "https://www.linkedin.com/company/turbin3",
+      "degree": "Builders Program Q1 2026",
+      "logoUrl": "/turbinelogo.jpg",
+      "start": "2026",
+      "end": "2026",
+      "description": "- Completed **Turbin3's Q1 2026 Builders Program** — one of the most rigorous Solana developer curricula\n- Shipped a **capstone project** and finished all weekly assignments to earn graduation\n- Deep-dived into **Anchor smart contracts**, **PDAs**, **CPIs**, and advanced **Solana architecture**\n- Joined a cohort of serious builders pushing the frontier of on-chain development"
+    },
+    {
+      "school": "Ackee Blockchain Security",
+      "href": "https://www.linkedin.com/company/ackee-blockchain/posts/?feedView=all",
+      "degree": "School of Solana — Season 7",
+      "logoUrl": "/ackee_blockchain_logo.jpeg",
+      "start": "2025",
       "end": "2025",
-      "description": "Joined Brilliko institute after my 7th class with a lot of curiosity about tech. Started with Graphic designing then video editing and VFX , all that lead to digital marketing . After covering multi-media got into coding with python , HTML & CSS after that it became a different journey with non stop building and learning things in the world of programming built backend systems in PHP . Also landed a internship with a role of graphic designer . Also won multiple certificates and trophies in the span of 3 years ."
+      "description": "- Completed **School of Solana Season 7** by Ackee Blockchain Security\n- Built multiple **Solana on-chain projects** with a focus on correctness and security\n- Completed weekly assignments and a **capstone project** to graduate\n- Gained strong foundations in **program security**, **account validation**, and **exploit prevention**"
+    },
+    {
+      "school": "Randamu",
+      "href": "https://www.linkedin.com/company/randamu/",
+      "degree": "Threshold Cryptography Bootcamp",
+      "logoUrl": "/randamu_logo.jpeg",
+      "start": "2025",
+      "end": "2025",
+      "description": "- Attended Randamu's **Threshold Cryptography Bootcamp** — a niche, highly technical program\n- Learned core concepts of **Threshold Cryptography**, **VRFs** (Verifiable Random Functions), and **distributed key schemes**\n- Built projects using **Randamu's tooling** and explored real-world applications in **trustless randomness** and **decentralized secrets**"
     },
     {
       "school": "100xDevs",
       "href": "https://www.linkedin.com/company/100xdevs/",
-      "degree": "Cohort 3",
+      "degree": "Cohort 3 — Full Stack + DevOps + Blockchain",
       "logoUrl": "/100xlogo.jpeg",
       "start": "2024",
-      "end": "",
-      "description": "Completed the Web Development + DevOps +\nBlockchain Cohort, Built and learnt about Web Application Development ,  System Deployment and Blockchain based technologies."
+      "end": "2025",
+      "description": "- Completed **Cohort 3** covering **Full Stack Web Development**, **DevOps**, and **Blockchain**\n- Built and deployed production-grade **web applications** with modern tooling\n- Learned **CI/CD**, **system design**, containerization with **Docker**, and cloud deployment\n- Explored **Web3 integrations**, smart contracts, and on-chain app development"
+    },
+    {
+      "school": "Brilliko Institute",
+      "href": "https://www.brilliko.com/",
+      "degree": "Multimedia & Web Development",
+      "logoUrl": "/brilliko-logo.png",
+      "start": "2022",
+      "end": "2025",
+      "description": "- Started with **Graphic Design**, **Video Editing & VFX**, and **Digital Marketing** — built a strong creative foundation\n- Transitioned into coding: **Python**, **HTML/CSS**, then **PHP** backend systems\n- Landed an **internship as a Graphic Designer** during the program\n- Won **multiple certificates and trophies** over 3 years of continuous learning and building"
     }
   ]
 }
