@@ -115,7 +115,7 @@ function EducationSection({ data, setData }: { data: PortfolioData; setData: Rea
   const add = () => {
     setData((d) => ({
       ...d,
-      education: [...d.education, { school: "New School", href: "", degree: "Degree / Course", logoUrl: "", start: "", end: "" }],
+      education: [...d.education, { school: "New School", href: "", degree: "Degree / Course", logoUrl: "", start: "", end: "", description: "" }],
     }));
     setExpanded(data.education.length);
   };
@@ -143,6 +143,7 @@ function EducationSection({ data, setData }: { data: PortfolioData; setData: Rea
                   <Field label="School URL" value={edu.href} onChange={(v) => update(i, "href", v)} placeholder="https://..." />
                   <Field label="Logo URL" value={edu.logoUrl} onChange={(v) => update(i, "logoUrl", v)} placeholder="/school.png" />
                 </div>
+                <Field label="Description" value={edu.description} onChange={(v) => update(i, "description", v)} multiline placeholder="Relevant coursework, achievements, activities..." />
                 <button onClick={() => remove(i)} className="text-xs text-red-400 hover:text-red-300 transition-colors">Remove entry</button>
               </div>
             )}

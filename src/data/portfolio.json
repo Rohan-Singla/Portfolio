@@ -1,37 +1,37 @@
 {
   "work": [
     {
-      "company": "456 IP",
-      "href": "https://www.linkedin.com/company/dcthree",
+      "company": "DC Three",
+      "href": "https://www.linkedin.com/company/dcthree/posts/?feedView=all",
       "badges": [],
-      "location": "Remote",
-      "title": "Frontend & Web3 Dev",
+      "location": "Miami, USA",
+      "title": "Founding Frontend & Web3 Dev (Remote)",
       "logoUrl": "/dcthree.jpeg",
       "start": "Sep 2024",
       "end": null,
-      "description": "Built the complete frontend for the company's products with client-side blockchain integrations — wallets, payments, and on-chain interactions. testing,,,"
+      "description": "- Built the **MVP of Assurative**, an **on-chain lending protocol** on **Base network** enabling guaranteed yield on deposits\n- Integrated **wallet providers** (Privy), **Gnosis Safe** tooling (**Safe Global**, **PalmeraDAO**), and on-chain **payments**\n- Ensured seamless **UX** and **Web3 functionality** across the entire product\n- Currently retained as a **founding advisor**"
     },
     {
       "company": "Aranyaaa",
       "href": "https://www.linkedin.com/company/aranyaaa",
       "badges": [],
-      "location": "Remote",
-      "title": "Backend Developer",
+      "location": "London , UK",
+      "title": "Backend Developer (Remote)",
       "logoUrl": "/aranyaaa.jpeg",
       "start": "June 2024",
       "end": "Sep 2024",
-      "description": "Developed the entire backend for Aranyaaa's clothing web application using PHP and MySQL."
+      "description": "- Built the **entire backend** for Aranyaaa's clothing web app using **PHP** and **MySQL**\n- Collaborated closely with the frontend team for seamless **API integration**\n- Led **digital marketing** — **SEO**, keyword research, and content strategy"
     },
     {
       "company": "AngelBells",
-      "href": "https://www.facebook.com/angelbells.co",
+      "href": "https://www.instagram.com/angelbells.fashion/",
       "badges": [],
-      "location": "Punjab, IN",
-      "title": "Full Stack Dev & Digital Marketer",
+      "location": "Punjab, Ludhiana , IN",
+      "title": "Full Stack Dev & Digital Marketer (On-Site)",
       "logoUrl": "/angelbells.jpg",
       "start": "January 2024",
       "end": "June 2024",
-      "description": "Helped the company increase sales on marketplaces and developed the full web application from scratch."
+      "description": "- Boosted **online sales** across **Amazon**, **Flipkart**, and **Myntra** through marketplace optimization\n- Ran **paid ads** on Instagram, Facebook, and Google for lead generation\n- Led **full web app development** for the brand from scratch"
     }
   ],
   "skills": [
@@ -56,7 +56,16 @@
     "Git",
     "WebSockets",
     "MySQL",
-    "MongoDB"
+    "MongoDB",
+    "Rust",
+    "Axum",
+    "Solana",
+    "Anchor",
+    "SQLx",
+    "Redis",
+    "Kafka",
+    "BullMQ",
+    "ClickhouseDB"
   ],
   "projects": [
     {
@@ -261,7 +270,8 @@
       "degree": "Your Degree / Course",
       "logoUrl": "",
       "start": "20XX",
-      "end": "20XX"
+      "end": "20XX",
+      "description": ""
     }
   ]
 }

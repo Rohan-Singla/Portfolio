@@ -5,12 +5,12 @@ export const DATA = {
   name: "Rohan Singla",
   initials: "RS",
   url: "https://rohanbuilds.vercel.app/",
-  location: "Punjab, IN",
+  location: "Delhi, Greater Noida IN",
   locationLink: "https://www.google.com/maps/place/punjab",
   description:
-    "Full Stack Web3 Developer. I love building things and learning new things. Building in public.",
+    "Full Stack | Rust | Backend/Infra | Solana Engineer",
   summary:
-    "In 2023, I shifted from being a Graphic Designer & Digital Marketer to full-time Web2 & Web3 development. I started out as a freelancer, diving into blockchain, building dApps, and contributing in Web3. Actively participating in hackathons and events, I've explored DeFi, Social, and Gaming — always pushing boundaries. My goal is to build impactful, scalable solutions in Web3 and beyond.",
+    "In 2023, I shifted from being a **Graphic Designer & Digital Marketer** to build **scalable backend services** and **blockchain dApps**. Experienced in **Web2 and Web3 Development** with a growing focus on **Rust**, **Infra**, **System Design**, and **DevOps**. Passionate about **open source**, continuous learning, and solving challenging engineering problems at scale.",
   avatarUrl: "/current.jpeg",
   openToWork: true,
   skills: [

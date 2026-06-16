@@ -56,6 +56,7 @@ export type EducationEntry = {
   logoUrl: string;
   start: string;
   end: string;
+  description: string;
 };
 
 export type PortfolioData = {

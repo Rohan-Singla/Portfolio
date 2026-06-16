@@ -3,7 +3,6 @@ import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
-import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Icons } from "@/components/icons";
@@ -18,9 +17,10 @@ const BLUR_FADE_DELAY = 0.04;
 
 const SKILL_GROUPS: Record<string, string[]> = {
   Frontend: ["React", "Next.js", "Typescript", "Javascript", "CSS", "Tailwind", "Bootstrap", "Shadcn"],
-  Backend: ["Node.js", "Python", "PHP", "Postgres", "MySQL", "MongoDB", "Prisma", "Drizzle", "WebSockets"],
-  Blockchain: ["Ethers.js", "Web3.js"],
-  DevOps: ["Docker", "Kubernetes", "Git"],
+  Backend: ["Node.js", "Python", "PHP", "Rust","Prisma", "Drizzle", "Axum", "SQLx", "WebSockets" , "Redis"],
+  Database: ["Postgres", "MySQL", "MongoDB" , "ClickhouseDB"],
+  Blockchain: ["Ethers.js", "Web3.js", "Solana", "Anchor" , "Rust"],
+  Infrastructure: ["Docker", "Kubernetes", "Git", "Kafka", "BullMQ"],
 };
 
 const projectIconMap: Record<string, React.ReactNode> = {
@@ -100,7 +100,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-base leading-relaxed text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-base leading-relaxed text-muted-foreground dark:prose-invert prose-strong:text-foreground prose-strong:font-semibold">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -138,9 +138,24 @@ export default function Page() {
                       <AvatarImage src={work.logoUrl} alt={work.company} className="object-contain" />
                       <AvatarFallback className="text-xs">{work.company[0]}</AvatarFallback>
                     </Avatar>
-                    <div className="flex-1 min-w-0 space-y-1">
-                      <div className="flex items-center justify-between gap-2 flex-wrap">
-                        <h3 className="font-semibold text-sm leading-none">{work.company}</h3>
+                    <div className="flex-1 min-w-0 space-y-1.5">
+                      <div className="flex items-start justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-semibold text-sm leading-none">{work.company}</h3>
+                          {work.href && (
+                            <a
+                              href={work.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-md bg-violet-500/10 text-violet-400 border border-violet-500/20 hover:bg-violet-500/20 transition-colors"
+                            >
+                              <svg className="size-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                              View Company
+                            </a>
+                          )}
+                        </div>
                         <span className="text-xs text-muted-foreground tabular-nums shrink-0">
                           {work.start} – {work.end ?? "Present"}
                         </span>
@@ -150,9 +165,9 @@ export default function Page() {
                         {work.location ? ` · ${work.location}` : ""}
                       </p>
                       {work.description && (
-                        <p className="text-sm text-muted-foreground leading-relaxed pt-1">
+                        <Markdown className="prose prose-sm max-w-full dark:prose-invert prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground prose-strong:font-semibold prose-p:my-0.5 prose-li:my-0 prose-ul:my-1 prose-ul:pl-4 [&>ul]:list-disc [&>ul]:space-y-0.5 pt-1 text-sm">
                           {work.description}
-                        </p>
+                        </Markdown>
                       )}
                     </div>
                   </div>
@@ -190,6 +205,11 @@ export default function Page() {
                     <p className="text-xs text-muted-foreground/50 mt-1 tabular-nums">
                       {edu.start} – {edu.end}
                     </p>
+                    {edu.description && (
+                      <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                        {edu.description}
+                      </p>
+                    )}
                   </div>
                 </a>
               </BlurFade>
