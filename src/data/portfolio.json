@@ -2,14 +2,14 @@
   "work": [
     {
       "company": "DC Three",
-      "href": "https://www.linkedin.com/company/dcthree/posts/?feedView=all",
+      "href": "https://www.linkedin.com/company/dcthree",
       "badges": [],
       "location": "Miami, USA",
       "title": "Founding Frontend & Web3 Dev (Remote)",
       "logoUrl": "/dcthree.jpeg",
       "start": "Sep 2024",
       "end": null,
-      "description": "- Built the **MVP of Assurative**, an **on-chain lending protocol** on **Base network** enabling guaranteed yield on deposits\n- Integrated **wallet providers** (Privy), **Gnosis Safe** tooling (**Safe Global**, **PalmeraDAO**), and on-chain **payments**\n- Ensured seamless **UX** and **Web3 functionality** across the entire product\n- Currently retained as a **founding advisor**"
+      "description": "Developed the MVP of Assurative, an On-chain lending protocol built on base network which helped people earn guaranteed yield on their money . \n\nEnsured seamless user experience and web3 functionality.\n\nWorked and integrated Wallets like Privy  also worked closely with Gnosis safes with tooling like Safe Global and PalmeraDAO . Integrated payments too.\n\nCurrently retained as an founding advisor ...."
     },
     {
       "company": "Aranyaaa",
@@ -20,18 +20,29 @@
       "logoUrl": "/aranyaaa.jpeg",
       "start": "June 2024",
       "end": "Sep 2024",
-      "description": "- Built the **entire backend** for Aranyaaa's clothing web app using **PHP** and **MySQL**\n- Collaborated closely with the frontend team for seamless **API integration**\n- Led **digital marketing** — **SEO**, keyword research, and content strategy"
+      "description": "Developed the entire backend for Aranyaaa's clothing web application using PHP and MySQL. Worked closely with the team for seamless integration with frontend. \n\nAlso led digital marketing for the web app SEO , keyword searching etc..."
     },
     {
       "company": "AngelBells",
-      "href": "https://www.instagram.com/angelbells.fashion/",
+      "href": "https://www.facebook.com/angelbells.co",
       "badges": [],
       "location": "Punjab, Ludhiana , IN",
       "title": "Full Stack Dev & Digital Marketer (On-Site)",
       "logoUrl": "/angelbells.jpg",
       "start": "January 2024",
       "end": "June 2024",
-      "description": "- Boosted **online sales** across **Amazon**, **Flipkart**, and **Myntra** through marketplace optimization\n- Ran **paid ads** on Instagram, Facebook, and Google for lead generation\n- Led **full web app development** for the brand from scratch"
+      "description": "Helped Angelbells increase their online sales for their clothing brand on marketplaces like Amazon , Flipkart, Myntra . Also led online marketing on instagram, facebook, google via running ads to generate leads, keyword searching. Also leaded the web app development for the brand."
+    },
+    {
+      "company": "Super30 3.0",
+      "href": "https://www.linkedin.com/company/100xschool/posts/?feedView=all",
+      "badges": [],
+      "location": "Delhi, Noida",
+      "title": "Student (On-Site)",
+      "logoUrl": "/100xlogo.jpeg",
+      "start": "May 2026 ",
+      "end": null,
+      "description": "Got to be a part of 100xSchool Super30 3.0 batch which is an intense 6 month sprint program of shipping things . The goal is to accelerate my learnings , meet great people , attend IRL hackathons , do things i have always missed out on and ship ship ship !"
     }
   ],
   "skills": [
@@ -265,13 +276,22 @@
   ],
   "education": [
     {
-      "school": "Your University / Institution",
-      "href": "",
-      "degree": "Your Degree / Course",
-      "logoUrl": "",
-      "start": "20XX",
-      "end": "20XX",
-      "description": ""
+      "school": "Brilliko",
+      "href": "https://www.brilliko.com/",
+      "degree": "Multimedia | Web Dev",
+      "logoUrl": "/brilliko-logo.png",
+      "start": "2022",
+      "end": "2025",
+      "description": "Joined Brilliko institute after my 7th class with a lot of curiosity about tech. Started with Graphic designing then video editing and VFX , all that lead to digital marketing . After covering multi-media got into coding with python , HTML & CSS after that it became a different journey with non stop building and learning things in the world of programming built backend systems in PHP . Also landed a internship with a role of graphic designer . Also won multiple certificates and trophies in the span of 3 years ."
+    },
+    {
+      "school": "100xDevs",
+      "href": "https://www.linkedin.com/company/100xdevs/",
+      "degree": "Cohort 3",
+      "logoUrl": "/100xlogo.jpeg",
+      "start": "2024",
+      "end": "",
+      "description": "Completed the Web Development + DevOps +\nBlockchain Cohort, Built and learnt about Web Application Development ,  System Deployment and Blockchain based technologies."
     }
   ]
 }
