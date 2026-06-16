@@ -87,7 +87,7 @@ export const DATA = {
       start: "Sep 2024",
       end: "Present",
       description:
-        "Built the complete frontend for the company's products with client-side blockchain integrations — wallets, payments, and on-chain interactions.",
+        "Built the complete frontend for the company's products with client-side blockchain integrations, wallets, payments, and on-chain interactions.",
     },
     {
       company: "Aranyaaa",
@@ -121,7 +121,7 @@ export const DATA = {
       dates: "May 2025 - June 2025",
       active: true,
       description:
-        "For the Perplexity AI Hackathon, my team and I built Finlearn AI — a platform that adapts to your learning style and financial goals, delivering personalized education that sticks.",
+        "For the Perplexity AI Hackathon, my team and I built Finlearn AI, a platform that adapts to your learning style and financial goals, delivering personalized education that sticks.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -153,7 +153,7 @@ export const DATA = {
       dates: "April 2025 - May 2025",
       active: true,
       description:
-        "For the Breakout Hackathon by Colosseum, my team and I built ABS Finance — an AI-powered tool that finds and allocates your assets to the highest-yielding opportunities across Solana vaults.",
+        "For the Breakout Hackathon by Colosseum, my team and I built ABS Finance, an AI-powered tool that finds and allocates your assets to the highest-yielding opportunities across Solana vaults.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -185,7 +185,7 @@ export const DATA = {
       dates: "April 2025 - May 2025",
       active: true,
       description:
-        "For the Redacted Hackathon by Solana, my team and I built Solanautics — a tool using the Solscan API that helps you stay updated, track wallets, follow smart money, and set price alerts. Won 3rd place.",
+        "For the Redacted Hackathon by Solana, my team and I built Solanautics, a tool using the Solscan API that helps you stay updated, track wallets, follow smart money, and set price alerts. Won 3rd place.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -216,7 +216,7 @@ export const DATA = {
       dates: "March 2025 - April 2025",
       active: true,
       description:
-        "For the Metamove AI Hackathon, my team and I built ApturaX — an AI Agent on Aptos for X (Twitter) that delivers real-time updates about the Aptos chain.",
+        "For the Metamove AI Hackathon, my team and I built ApturaX, an AI Agent on Aptos for X (Twitter) that delivers real-time updates about the Aptos chain.",
       technologies: [
         "Next.js",
         "Typescript",

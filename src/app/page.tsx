@@ -2,7 +2,7 @@ import { GithubGraph } from "@/components/github-graph";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
+import { ProjectsSection } from "@/components/projects-section";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Icons } from "@/components/icons";
@@ -21,12 +21,6 @@ const SKILL_GROUPS: Record<string, string[]> = {
   Database: ["Postgres", "MySQL", "MongoDB" , "ClickhouseDB"],
   Blockchain: ["Ethers.js", "Web3.js", "Solana", "Anchor" , "Rust"],
   Infrastructure: ["Docker", "Kubernetes", "Git", "Kafka", "BullMQ"],
-};
-
-const projectIconMap: Record<string, React.ReactNode> = {
-  github: <Icons.github className="size-3" />,
-  youtube: <Icons.youtube className="size-3" />,
-  globe: <Icons.globe className="size-3" />,
 };
 
 const hackathonIconMap: Record<string, React.ReactNode> = {
@@ -67,20 +61,6 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
-              <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <div className="flex items-center gap-3 pt-2">
-                  <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 text-white transition-colors shadow-sm shadow-violet-500/20"
-                  >
-                    <svg className="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Download Resume
-                  </a>
-                </div>
-              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border-2 border-violet-500/30 ring-2 ring-violet-500/20 ring-offset-2 ring-offset-background">
@@ -179,6 +159,8 @@ export default function Page() {
         </div>
       </section>
 
+      <ProjectsSection projects={portfolio.projects as any} />
+
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -273,47 +255,6 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 10.7}>
             <GithubGraph username={DATA.contact.social.GitHub.url.split("/").pop()!} />
           </BlurFade>
-        </div>
-      </section>
-
-      <section id="projects">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 px-3 py-1 text-sm font-medium">
-                  My Projects
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple websites to complex web
-                  applications. Here are a few of my recents.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {portfolio.projects.map((project, id) => (
-              <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
-                <ProjectCard
-                  href={project.href}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links.map((l) => ({
-                    type: l.type,
-                    href: l.href,
-                    icon: projectIconMap[l.icon] ?? <Icons.globe className="size-3" />,
-                  }))}
-                />
-              </BlurFade>
-            ))}
-          </div>
         </div>
       </section>
 
