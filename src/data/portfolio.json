@@ -1,17 +1,6 @@
 {
   "work": [
     {
-      "company": "Super30 3.0",
-      "href": "https://www.linkedin.com/company/100xschool/posts/?feedView=all",
-      "badges": [],
-      "location": "Delhi, Noida",
-      "title": "Student (On-Site)",
-      "logoUrl": "/100xlogo.jpeg",
-      "start": "May 2026",
-      "end": null,
-      "description": "- Selected for **100xSchool Super30 3.0**, an **intense 6-month sprint** focused on shipping real products\n- Attending **IRL hackathons**, collaborating with top builders, and accelerating hands-on learning\n- Goal: **ship fast**, grow through doing, and make the most of every opportunity"
-    },
-    {
       "company": "DC Three",
       "href": "https://www.linkedin.com/company/dcthree",
       "badges": [],
@@ -369,6 +358,15 @@
     }
   ],
   "education": [
+    {
+      "school": "100xSchool",
+      "href": "https://www.linkedin.com/company/100xschool/posts/?feedView=all",
+      "degree": "Super30 3.0",
+      "logoUrl": "/100xlogo.jpeg",
+      "start": "2026",
+      "end": "2026",
+      "description": "- Selected for **100xSchool Super30 3.0**, an **intense 6-month sprint** focused on shipping real products\n- Attending **IRL hackathons**, collaborating with top builders, and accelerating hands-on learning\n- Goal: **ship fast**, grow through doing, and make the most of every opportunity"
+    },
     {
       "school": "SolanaTurbine",
       "href": "https://www.linkedin.com/company/turbin3",
