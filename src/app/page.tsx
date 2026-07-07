@@ -3,6 +3,7 @@ import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectsSection } from "@/components/projects-section";
+import { OpenSourceSection } from "@/components/open-source-section";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Icons } from "@/components/icons";
@@ -160,6 +161,8 @@ export default function Page() {
       </section>
 
       <ProjectsSection projects={portfolio.projects as any} />
+
+      <OpenSourceSection />
 
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
