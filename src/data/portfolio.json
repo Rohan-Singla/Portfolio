@@ -204,6 +204,72 @@
       ],
       "video": "",
       "image": "/aptura.jpg"
+    },
+    {
+      "title": "Matching Engine",
+      "href": "https://github.com/Rohan-Singla/prediction-assignment",
+      "dates": "June 2026 ",
+      "active": true,
+      "description": "A high-performance limit order book built in **Rust**, using Apache **Kafka** as the message bus between a **REST/WebSocket API** server and a matching engine worker.",
+      "technologies": [
+        "Rust",
+        "Kafka",
+        "Tokio",
+        "Axum"
+      ],
+      "links": [
+        {
+          "type": "Repository",
+          "href": "https://github.com/RohanCreations/prediction-market-rust",
+          "icon": "github"
+        }
+      ],
+      "video": "",
+      "image": "/image.png"
+    },
+    {
+      "title": "Claude Code",
+      "href": "https://github.com/Rohan-Singla/claude-code-rust",
+      "dates": "June 2026",
+      "active": true,
+      "description": "A **Rust CLI agent** that takes a natural language prompt and uses an LLM to reason about and act on your codebase via an **agent loop**.",
+      "technologies": [
+        "Rust",
+        "Async-0penai",
+        "Clap",
+        "Tokio",
+        "Axum"
+      ],
+      "links": [
+        {
+          "type": "Repository",
+          "href": "https://github.com/Rohan-Singla/claude-code-rust",
+          "icon": "github"
+        }
+      ],
+      "video": "",
+      "image": "/claude.png"
+    },
+    {
+      "title": "Kafka in Rust",
+      "href": "https://github.com/Rohan-Singla/kafka-rust",
+      "dates": "June 2026",
+      "active": true,
+      "description": "A **message broker** built from scratch in **Rust**, inspired by Kafka. Not a wrapper around Kafka. Not a tutorial clone. The actual storage engine, **binary protocol**, and TCP server written from the ground up..",
+      "technologies": [
+        "Rust",
+        "Tracing",
+        "Bytes"
+      ],
+      "links": [
+        {
+          "type": "Repository",
+          "href": "https://github.com/Rohan-Singla/kafka-rust",
+          "icon": "github"
+        }
+      ],
+      "video": "",
+      "image": "/kafka.png"
     }
   ],
   "hackathons": [
@@ -361,11 +427,11 @@
     {
       "school": "100xSchool",
       "href": "https://www.linkedin.com/company/100xschool/posts/?feedView=all",
-      "degree": "Super30 3.0",
+      "degree": "Hacker House",
       "logoUrl": "/100xlogo.jpeg",
       "start": "2026",
       "end": "2026",
-      "description": "- Selected for **100xSchool Super30 3.0**, an **intense 6-month sprint** focused on shipping real products\n- Attending **IRL hackathons**, collaborating with top builders, and accelerating hands-on learning\n- Goal: **ship fast**, grow through doing, and make the most of every opportunity"
+      "description": "- Selected for **100xSchool Super30 3.0** hacker house where you ship and learn together with the best talent.\n- Attending **IRL hackathons**, collaborating with top builders, and accelerating hands-on learning\n- Goal: **ship fast**, grow through doing, and make the most of every opportunity"
     },
     {
       "school": "SolanaTurbine",
@@ -411,6 +477,15 @@
       "start": "2022",
       "end": "2025",
       "description": "- Started with **Graphic Design**, **Video Editing & VFX**, and **Digital Marketing**, built a strong creative foundation\n- Transitioned into coding: **Python**, **HTML/CSS**, then **PHP** backend systems\n- Landed an **internship as a Graphic Designer** during the program\n- Won **multiple certificates and trophies** over 3 years of continuous learning and building"
+    },
+    {
+      "school": "Rektoff",
+      "href": "https://www.rektoff.xyz/",
+      "degree": "Solana Rust Security",
+      "logoUrl": "/rektoff.png",
+      "start": "2026",
+      "end": "2026",
+      "description": "- Part of  **Cohort 5** covering **Solana Rust Security**, **Rust**, and **Anchor Programs** security.\n- Learning about low level and core **solana tech** and architecture .\n- Learning about **rust security** writing secure programs .\n- Anchor smart contracts **auditing** . "
     }
   ]
 }

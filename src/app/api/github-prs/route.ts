@@ -24,7 +24,7 @@ const TRACKED_REPOS = [
   "anza-xyz/agave",
   "rust-lang/rust",
   "paradedb/paradedb",
-  "openslate/openslate",
+  "MrSheerluck/openslate",
 ];
 
 async function fetchPRsForRepo(username: string, repo: string): Promise<PR[]> {

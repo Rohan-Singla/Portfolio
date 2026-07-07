@@ -57,12 +57,12 @@ const PROJECT_META: Record<
     language: "Rust",
     languageColor: "bg-orange-500",
   },
-  "openslate/openslate": {
+  "MrSheerluck/openslate": {
     name: "OpenSlate",
     description:
-      "Open-source platform for content analytics and creator intelligence, helping brands make data-driven decisions.",
-    language: "TypeScript",
-    languageColor: "bg-blue-500",
+      "Self-hosted markdown note-taking app. Fast, simple, private. Access your notes from any device.",
+    language: "Rust",
+    languageColor: "bg-orange-500",
   },
 };
 
